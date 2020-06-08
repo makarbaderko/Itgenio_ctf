@@ -19,9 +19,9 @@ Here our Itgenio team is going to store and host our online-ctf.
 Напишите `git pull`
 
 # Для запуска сайта
-Зайдите в папку с проектом и выполните шаг "ДЛЯ ПЕРВОГО ЗАПУСКА"
-Перейдите в папку /web/
-Перейдите в папку /itgenio-ctf/
-Напишите `yarn install`
-Ждите...
-Напишите `yarn start`
+Зайдите в папку с проектом и выполните шаг "ДЛЯ ПЕРВОГО ЗАПУСКА"   
+Перейдите в папку /web/   
+Перейдите в папку /itgenio-ctf/   
+Напишите `yarn install`   
+Ждите...   
+Напишите `yarn start`   
