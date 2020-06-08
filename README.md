@@ -20,7 +20,7 @@ Here our Itgenio team is going to store and host our online-ctf.
 
 # Для запуска сайта
 Зайдите в папку с проектом и выполните шаг "ДЛЯ ПЕРВОГО ЗАПУСКА"   
-Установите Yarn здесь: https://classic.yarnpkg.com/en/docs/install/
+Установите Yarn здесь: https://classic.yarnpkg.com/en/docs/install/   
 Перейдите в папку /web/   
 Перейдите в папку /itgenio-ctf/   
 Напишите `yarn install`   
