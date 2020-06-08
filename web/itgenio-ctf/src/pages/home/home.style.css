@@ -1,0 +1,10 @@
+#about{
+    position: absolute;
+    top: 150px; 
+    right: 50px;
+    left: 15px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: medium;
+    border: 1px solid gray;
+}
