@@ -17,3 +17,8 @@ Here our Itgenio team is going to store and host our online-ctf.
 # Чтобы принять на компьютер чужие изменения
 Зaйдите в папку с проектом через терминал
 Напишите `git pull`
+
+# Для запуска сайта
+Зайдите в папку с проектом выполните предыдущий шаг
+Напишите `yarn install`
+напишите `yarn start`
