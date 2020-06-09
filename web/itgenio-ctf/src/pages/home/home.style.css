@@ -6,7 +6,8 @@
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 100;
     font-size: medium;
-    border: 1px solid gray;
+    border: 3px solid gray;
+    border-radius: 10px;
 }
 .directions{
     position: absolute;
