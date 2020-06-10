@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 .sign-in{
     position: absolute;
     top: 200px;
     left: 550px;
     font-family: 'Open Sans Condensed', sans-serif;
-=======
-.sign-in{
-    position: absolute;
-    top: 200px;
-    left: 400px;
-    font-family: 'Open Sans Condensed', sans-serif;
->>>>>>> 9313a255723bbe960b95020f8e1fde0b808e766b
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './inpt.style.css'
 const Form_Flag = () => (
+    <div className="flags">
     <div className="flagEntry">
         <input type="text"
         id="auth-flag"
@@ -13,7 +14,7 @@ const Form_Flag = () => (
     </input>
     <button id="btn" name="Send">Send</button>
     </div>
-    
+    </div>
 )
 
 export default Form_Flag;
