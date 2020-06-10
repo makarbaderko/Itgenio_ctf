@@ -5,7 +5,7 @@ const Form_Flag = () => (
         <input type="text"
         id="auth-flag"
         class="form-control"
-        placeholder="flag{ ... }"
+        placeholder="Сюда введи флаг"
         data-toggle="tooltip"
         data-placement="bottom"
         title=""   

@@ -6,8 +6,8 @@
     margin-bottom: 25px;
 }
 #logo {
-    width: 140px;
-    height: 75px;
+    width: auto;
+    height: auto;
     padding: 25px
 }
 #sign-up {
