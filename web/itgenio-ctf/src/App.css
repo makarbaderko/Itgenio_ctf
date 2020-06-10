@@ -45,7 +45,7 @@ a{
   color: black;
 }
 html{
-  background: radial-gradient(circle farthest-corner at 100px 50px, #32CD32, #40E0D0);
+  background: radial-gradient(circle farthest-corner at 100px 50px, #FFEFD5, #FFFACD);
 }
 .flag-entry {
   position: relative;
