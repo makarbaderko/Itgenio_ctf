@@ -1,7 +1,7 @@
 #auth-flag{
     position: absolute;
     top: 400px;
-    left: 550px;
+    left: 700px;
 }
 #btn{
   background-color: #4CAF50; /* Green */
@@ -14,5 +14,5 @@
   font-size: 16px;
   position: absolute;
   top: 385px;
-  left: 710px;
+  left: 910px;
 }
