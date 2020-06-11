@@ -38,7 +38,7 @@
   width: auto;
   border: none;
   border-radius: 5px;
-  border-bottom: 1px solid $sub-color;
+  border-bottom: 1px solid sub-color;
   margin: 0px 0;
   margin-right: 30px;
 }
