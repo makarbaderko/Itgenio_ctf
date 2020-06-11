@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/itgenio-ctf/static/css/main.994dcba4.chunk.css",
+    "main.js": "/itgenio-ctf/static/js/main.d55f0467.chunk.js",
+    "main.js.map": "/itgenio-ctf/static/js/main.d55f0467.chunk.js.map",
+    "runtime-main.js": "/itgenio-ctf/static/js/runtime-main.8ad265d7.js",
+    "runtime-main.js.map": "/itgenio-ctf/static/js/runtime-main.8ad265d7.js.map",
+    "static/js/2.e255e827.chunk.js": "/itgenio-ctf/static/js/2.e255e827.chunk.js",
+    "static/js/2.e255e827.chunk.js.map": "/itgenio-ctf/static/js/2.e255e827.chunk.js.map",
+    "index.html": "/itgenio-ctf/index.html",
+    "precache-manifest.8616d0c4a7b84bff5a40f92fe31d11c4.js": "/itgenio-ctf/precache-manifest.8616d0c4a7b84bff5a40f92fe31d11c4.js",
+    "service-worker.js": "/itgenio-ctf/service-worker.js",
+    "static/css/main.994dcba4.chunk.css.map": "/itgenio-ctf/static/css/main.994dcba4.chunk.css.map",
+    "static/js/2.e255e827.chunk.js.LICENSE.txt": "/itgenio-ctf/static/js/2.e255e827.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8ad265d7.js",
+    "static/js/2.e255e827.chunk.js",
+    "static/css/main.994dcba4.chunk.css",
+    "static/js/main.d55f0467.chunk.js"
+  ]
+}
