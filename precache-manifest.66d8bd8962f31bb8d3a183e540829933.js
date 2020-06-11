@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e547fd300d551d45fa5b1d7157b03d1",
+    "revision": "9041b6438b3494ee189ce889ac0dc576",
     "url": "/itgenio-ctf/index.html"
   },
   {
-    "revision": "039c1c183c296ada9052",
-    "url": "/itgenio-ctf/static/css/main.994dcba4.chunk.css"
+    "revision": "2934d51a02a7e8659bbc",
+    "url": "/itgenio-ctf/static/css/main.e834f982.chunk.css"
   },
   {
     "revision": "95409bcb1b9d10b8947b",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/itgenio-ctf/static/js/2.e255e827.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "039c1c183c296ada9052",
+    "revision": "2934d51a02a7e8659bbc",
     "url": "/itgenio-ctf/static/js/main.d55f0467.chunk.js"
   },
   {

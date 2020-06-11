@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/itgenio-ctf/precache-manifest.8616d0c4a7b84bff5a40f92fe31d11c4.js"
+  "/itgenio-ctf/precache-manifest.66d8bd8962f31bb8d3a183e540829933.js"
 );
 
 self.addEventListener('message', (event) => {
