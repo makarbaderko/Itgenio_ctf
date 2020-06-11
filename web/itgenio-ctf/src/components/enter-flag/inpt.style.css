@@ -4,7 +4,6 @@
     left: 700px;
 }
 #btn{
-  background-color: #4CAF50; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -15,9 +14,30 @@
   position: absolute;
   top: 380px;
   left: 830px;
+  margin-top: 14px;
+  background: radial-gradient(circle farthest-corner at 100px 50px, #9ACD32, #4682B4);
+  margin-left: 100px;
 }
 .flags{
   position: absolute;
   top: 1px;
-  left: 50px;
+  left: -50px;
+}
+.flag-entry {
+  position: relative;
+  margin: 0px 0;
+}
+.form-control {
+  background: none;
+  background-color: white;
+  color: $sub-color;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: auto;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $sub-color;
+  margin: 0px 0;
+  margin-right: 30px;
 }
