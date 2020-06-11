@@ -23,9 +23,7 @@ class TaskList extends React.Component {
     return (
       <div className="directory-menu">
         {this.state.tasks.map(({ name, ...otherSectionProps }) => (
-          <Link to="chart" target="_blank" to="http://link2external.page.com">
-            <MenuItem key={name} {...otherSectionProps}></MenuItem>
-          </Link>
+            <a target="_blank" href="https://www.google.com"><MenuItem key={name} {...otherSectionProps}></MenuItem></a>
         ))}
       </div>
     );
