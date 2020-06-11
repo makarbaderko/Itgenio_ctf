@@ -47,26 +47,3 @@ a{
 html{
   background: radial-gradient(circle farthest-corner at 100px 50px, #FFEFD5, #FFFACD);
 }
-.flag-entry {
-  position: relative;
-  margin: 0px 0;
-}
-.form-control {
-  background: none;
-  background-color: white;
-  color: $sub-color;
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: auto;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid $sub-color;
-  margin: 0px 0;
-  margin-right: 30px;
-}
-#btn{
-  margin-top: 14px;
-  background: radial-gradient(circle farthest-corner at 100px 50px, #9ACD32, #4682B4);
-  margin-left: 100px;
-}
