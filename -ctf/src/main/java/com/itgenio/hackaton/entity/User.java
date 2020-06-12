@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "t_user")
-public class User<principal> extends SecurityContextHolder implements UserDetails {
+public class User extends SecurityContextHolder implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,11 +26,21 @@ public class User<principal> extends SecurityContextHolder implements UserDetail
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
 
+    public User(@Size(min = 2, message = "Not less than 5 characters") String username, @Size(min = 2, message = "Not less than 5 characters") String password, String passwordConfirm) {
+        this.username = username;
+        this.password = password;
+        this.passwordConfirm = passwordConfirm;
+    }
 
-
-
+    public User(@Size(min = 2, message = "Not less than 5 characters") String username, @Size(min = 2, message = "Not less than 5 characters") String password) {
+        this.username = username;
+        this.password = password;
+    }
 
     public User() {
+    }
+    public User(Long id) {
+        this.id = id;
     }
 
     public Long getId() {

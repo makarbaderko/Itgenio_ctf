@@ -1,0 +1,12 @@
+com\itgenio\hackaton\service\UserService.class
+com\itgenio\hackaton\repository\UserRepository.class
+com\itgenio\hackaton\entity\User.class
+com\itgenio\hackaton\repository\FlagRepository.class
+com\itgenio\hackaton\repository\RoleRepository.class
+com\itgenio\hackaton\Runner.class
+com\itgenio\hackaton\entity\Role.class
+com\itgenio\hackaton\controller\HomeController.class
+com\itgenio\hackaton\config\MvcConfig.class
+com\itgenio\hackaton\entity\Flag.class
+com\itgenio\hackaton\service\FlagService.class
+com\itgenio\hackaton\config\WebSecurityConfig.class

@@ -1,5 +1,7 @@
 package com.itgenio.hackaton;
 
+import com.itgenio.hackaton.entity.Flag;
+import com.itgenio.hackaton.service.FlagService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

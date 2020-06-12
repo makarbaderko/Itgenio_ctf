@@ -1,5 +1,6 @@
 package com.itgenio.hackaton.entity;
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name="t_flag")
@@ -7,11 +8,7 @@ public class Flag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private int flagId;
-    public String flagKey;
-    public Flag(){
-    }
-
+    public String flagKey ;
     public long getId() {
         return id;
     }
@@ -20,12 +17,16 @@ public class Flag {
         this.id = id;
     }
 
-    public int getFlagId() {
-        return flagId;
+
+    public Flag(){
     }
 
-    public void setFlagId(int flagId) {
-        this.flagId = flagId;
+    public Flag(long id, String flagKey) {
+        this.id = id;
+        this.flagKey = flagKey;
+    }
+    public Flag( String flagKey) {
+        this.flagKey = flagKey;
     }
 
     public String getFlagKey() {
