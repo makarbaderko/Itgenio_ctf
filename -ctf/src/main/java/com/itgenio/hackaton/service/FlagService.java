@@ -12,15 +12,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.util.Collections;
 import java.util.List;
 
 @Service
 public class FlagService  {
-    @PersistenceContext
-    private EntityManager em;
     @Autowired
     FlagUserRepository flagUserRepository;
     @Autowired
@@ -31,21 +26,22 @@ public class FlagService  {
     UserService userService;
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
-    Flag fla = new Flag();
-    public boolean saveFlagKey(Flag flag){
-
-        System.err.println(flag.getFlagKey());
+    public boolean saveFlag(Flag flag){
         flag.setFlagKey(bCryptPasswordEncoder.encode(flag.getFlagKey()));
-        System.err.println(flag.getFlagKey());
         flagRepository.save(flag);
         return true;
     }
+    public String getFlag(Long id){
+        if(flagRepository.findFlagById(id).getFlagText()==null){
+            return "<div>Not found</div>";
+        }
+        return flagRepository.findFlagById(id).getFlagText();
+    }
     public boolean checkFlag(Flag flag, String username){
-        Long id = flag.getId();
         String key = flag.getFlagKey();
         Long idU = userRepository.findByUsername(username).getId();
         try{
-            Flag f = flagRepository.findFlagById(id);
+            Flag f = flagRepository.findFlagByFlagKey(key);
             if(f==null){
                 System.err.println("false");
                 return false;
@@ -53,22 +49,23 @@ public class FlagService  {
             System.err.println(f);
             System.err.println(bCryptPasswordEncoder.encode(key));
             if(bCryptPasswordEncoder.matches(key, f.getFlagKey())){
-                 flagUserRepository.save(new FlagUserSolution(id, idU, true));
+                 flagUserRepository.save(new FlagUserSolution(f.getId(), idU, true));
                 System.err.println("true");
                 return true;
 
             }
             System.err.println("false2");
             return false;
-
         }catch (NullPointerException n){
             System.err.println("NullPointer");
         }
         return false;
     }
-    public List<FlagUserSolution> getAllSolvedFlags(Long id){
-        List <FlagUserSolution> list = flagUserRepository.findAllByUserId(id);;
+    public List<FlagUserSolution> getAllSolvedFlagsUser(Long id){
+        List <FlagUserSolution> list = flagUserRepository.findAllByUserId(id);
         return list;
     }
-
+    public int getAllFlags(){
+        return flagRepository.findAll().size();
+    }
 }

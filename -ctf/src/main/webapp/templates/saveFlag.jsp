@@ -9,18 +9,16 @@
 </head>
 
 <body>
-<sec:authorize access="isAuthenticated()">
-    <% response.sendRedirect("/"); %>
-</sec:authorize>
 <div>
-    <form method="POST" action="/login">
+    <form method="POST" action="/xysavexyFlag">
         <h2>Вход в систему</h2>
         <div>
-            <input name="username" type="text" placeholder="Username"
+            <input name="flagTitle" type="text" placeholder="Title"
                    autofocus="true"/>
-            <input name="password" type="password" placeholder="Password"/>
-            <button type="submit">Log In</button>
-            <h4><a href="/login">Login</a></h4>
+            <input name="flagKey" type="text" placeholder="FlagKey"/>
+            <textarea name="flagText"></textarea>
+            <button type="submit">Save</button>
+            <h4><a href="/">Index</a></h4>
         </div>
     </form>
 </div>

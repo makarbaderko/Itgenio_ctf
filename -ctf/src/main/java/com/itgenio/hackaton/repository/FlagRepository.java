@@ -11,4 +11,5 @@ import java.util.Optional;
 @Repository
 public interface FlagRepository extends JpaRepository<Flag, Long> {
    Flag findFlagById(Long id);
+   Flag findFlagByFlagKey(String key);
 }

@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class HomeController {
     @Autowired
@@ -39,7 +42,6 @@ public class HomeController {
     public String loginSubmit(Model model, @ModelAttribute User user){
         boolean loginSucceed = userService.login(user);
         if(loginSucceed){
-
             return "index";
         }
         model.addAttribute("error", true);
@@ -49,7 +51,6 @@ public class HomeController {
     @GetMapping("/registration")
     public String register(Model model){
         model.addAttribute("user", new User());
-
         return "registration";
     }
     @PostMapping("/registration")
@@ -64,20 +65,29 @@ public class HomeController {
     @GetMapping("/flag")
     public String flagGet(Model model){
         model.addAttribute("flag", new Flag());
+     //   model.addAttribute("allFlags", getAllFlagHtml()); this method is supposed to show all html code
+        System.err.println(getAllSolvedFlags(findId()));
         return "flag";
     }
     @PostMapping("/flag")
     public String flagCheck(Model model, @ModelAttribute Flag flag){
-        model.addAttribute("flag", new Flag());
+        model.addAttribute("true", new Error());
         boolean checkFlag = flagService.checkFlag(flag, findUsername());
-        System.out.println(flagService.getAllSolvedFlags(findId()));
-        for(int i = 0; i<flagService.getAllSolvedFlags(findId()).size();i++){
-            System.out.println(flagService.getAllSolvedFlags(findId()).get(i).getFlagId());
-        }
+        System.out.println(getAllSolvedFlags(findId()));
         if(checkFlag){
             return "flag";
         }
         return "flag";
+    }
+    @GetMapping("/xysavexyFlag")
+    public String saveFlag(Model model){
+        model.addAttribute("flag", new Flag());
+        return "saveFlag";
+    }
+    @PostMapping("/xysavexyFlag")
+    public String saveFlag(Model model, @ModelAttribute Flag flag){
+        flagService.saveFlag(flag);
+        return "saveFlag";
     }
 
     private String findUsername(){
@@ -94,5 +104,23 @@ public class HomeController {
         }
         return user.getId();
     }
-
+    private ArrayList<Long> getAllSolvedFlags(Long id){
+        ArrayList<Long> list = new ArrayList<>();
+        if(flagService.getAllSolvedFlagsUser(id)!=null){
+            for(int i = 0; i<flagService.getAllSolvedFlagsUser(findId()).size();i++){
+                list.add(flagService.getAllSolvedFlagsUser(findId()).get(i).getFlagId());
+            }
+            return list;
+        }
+        list.add(0L);
+        return list;
+    }
+    Flag flag = new Flag();
+    private ArrayList<String>getAllFlagHtml(){
+        ArrayList<String> list = new ArrayList<>();
+        for(int i = 0; i<flagService.getAllFlags();i++){
+            list.add(flagService.getFlag((long) i));
+        }
+        return list;
+    }
 }
